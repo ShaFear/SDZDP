@@ -1,4 +1,4 @@
-package test.Graph;
+package graph;
 
 public class Polaczenie {
     public final Wierzcholek cel;
