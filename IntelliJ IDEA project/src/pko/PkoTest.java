@@ -2,7 +2,7 @@ package pko;
 
 import dijkstra.Dijkstra;
 import dijkstra.EtapDrogi;
-import graph.Wierzcholek;
+import graf.Wierzcholek;
 
 import java.io.File;
 import java.util.List;

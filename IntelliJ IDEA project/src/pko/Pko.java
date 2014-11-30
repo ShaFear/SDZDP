@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dijkstra.Dijkstra;
-import graph.Miasto;
-import graph.Polaczenie;
+import graf.Miasto;
+import graf.Polaczenie;
 
 /**
  * PKO - przygotowany kontener operacyjny

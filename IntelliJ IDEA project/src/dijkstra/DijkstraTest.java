@@ -1,8 +1,8 @@
 package dijkstra;
 
-import graph.Polaczenie;
-import graph.Miasto;
-import graph.Wierzcholek;
+import graf.Polaczenie;
+import graf.Miasto;
+import graf.Wierzcholek;
 
 import java.util.List;
 

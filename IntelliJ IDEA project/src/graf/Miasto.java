@@ -1,7 +1,7 @@
-package graph;
+package graf;
 
 import dijkstra.EtapDrogi;
-import java.awt.*;
+
 import java.util.ArrayList;
 
 public class Miasto {

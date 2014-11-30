@@ -1,4 +1,4 @@
-package graph;
+package graf;
 
 public class Polaczenie {
     public final Wierzcholek cel;

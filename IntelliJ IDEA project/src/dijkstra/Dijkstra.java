@@ -1,7 +1,7 @@
 package dijkstra;
 
-import graph.Polaczenie;
-import graph.Wierzcholek;
+import graf.Polaczenie;
+import graf.Wierzcholek;
 
 import java.util.PriorityQueue;
 import java.util.List;
