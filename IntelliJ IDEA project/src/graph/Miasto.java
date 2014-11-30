@@ -1,8 +1,13 @@
 package graph;
 
+import dijkstra.EtapDrogi;
+import java.awt.*;
+import java.util.ArrayList;
+
 public class Miasto {
     private int id;
     private String nazwa;
+    private ArrayList<EtapDrogi> etapy;
 
     public Wierzcholek getW() {
         return w;
@@ -14,6 +19,7 @@ public class Miasto {
         this.id = id;
         this.nazwa = nazwa;
         w = new Wierzcholek(this);
+        etapy = new ArrayList<EtapDrogi>();
     }
 
     @Override

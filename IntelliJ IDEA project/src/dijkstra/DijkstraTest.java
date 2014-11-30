@@ -6,7 +6,7 @@ import graph.Wierzcholek;
 
 import java.util.List;
 
-public class Test {
+public class DijkstraTest {
 
     public static void main(String[] args) {
         Wierzcholek w0 = new Wierzcholek(new Miasto(0, "Radom"));
@@ -25,9 +25,9 @@ public class Test {
         for (int j = 0; j < wierzcholki.length; j++) {
             Wierzcholek v = wierzcholki[j];
             if (v.najmniejszaOdleglosc == Integer.MAX_VALUE)
-                System.out.println("Brak połączenia do " + v.toString());
+                System.out.println("Brak połączenia do " + v.getMiasto().toString());
             else {
-                System.out.println("Odległość do " + v.toString() + ": " + v.najmniejszaOdleglosc);
+                System.out.println("Odległość do " + v.getMiasto().toString() + ": " + v.najmniejszaOdleglosc);
                 List<EtapDrogi> s = Dijkstra.getShortestPathTo(v);
                 System.out.println("Droga: " + s.toString());
             }
