@@ -7,11 +7,13 @@ public class Miasto implements Comparable<Miasto> {
     private final int pojemnoscSamochodu;
     private ArrayList<Przesylka> przesylki;
     private int priorytet;
+    private graf.Miasto miasto;
 
-    public Miasto(int pojemnoscSamochodu) {
+    public Miasto(int pojemnoscSamochodu, graf.Miasto miasto) {
         przesylki = new ArrayList<Przesylka>();
         priorytet = 0;
         this.pojemnoscSamochodu = pojemnoscSamochodu;
+        this.miasto = miasto;
     }
 
     public int getPriorytet() {
@@ -20,27 +22,27 @@ public class Miasto implements Comparable<Miasto> {
 
     public void dodajPrzesylke(Przesylka p) {
         przesylki.add(p);
+        this.obliczPriorytet();
     }
 
-    private void obliczPriorytet() {
-        int j = 0;
+    public void obliczPriorytet() {
+        int j = przesylki.size()-1;
         priorytet = 0;
-        while ((j < pojemnoscSamochodu) && (j < przesylki.size())) {
+        while ((j >= przesylki.size()- pojemnoscSamochodu) && (j>=0)) {
             priorytet += przesylki.get(j).getPriorytet();
-            j++;
+            j--;
         }
     }
 
     @Override
     public int compareTo(Miasto o) {
         Collections.sort(przesylki);
-        this.obliczPriorytet();
         return this.getPriorytet() - o.getPriorytet();
     }
 
     @Override
     public String toString() {
-        return priorytet + ": \n" + this.przesylki.toString();
+        return miasto.toString() + " " + priorytet + ": \n" + this.przesylki.toString();
     }
 
 

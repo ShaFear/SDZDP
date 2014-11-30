@@ -1,5 +1,8 @@
 package przesylki;
 
+import kmip.Kmip;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -8,8 +11,11 @@ public class TestPrzesylki {
         ArrayList <Miasto> m = new ArrayList<Miasto>();
         int pj = 2; //pojemnosc samochodu
 
+        File f = new File("test.txt");
+        Kmip p = new Kmip(f, 0);
+
         for(int j=0; j < 5; j++) {
-            m.add(new Miasto(pj));
+            m.add(new Miasto(pj, p.getMiasta().get(j)));
         }
 
         Przesylka p0 = new Przesylka(0, "kapeć", 5);
@@ -19,7 +25,7 @@ public class TestPrzesylki {
         Przesylka p4 = new Przesylka(4, "złoto", 50);
         Przesylka p5 = new Przesylka(5, "batonik", 30);
 
-        m.get(0).dodajPrzesylke(p0);
+        m.get(0).dodajPrzesylke(p1);
         m.get(0).dodajPrzesylke(p0);
         m.get(0).dodajPrzesylke(p0);
         m.get(0).dodajPrzesylke(p4);

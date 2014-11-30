@@ -1,4 +1,4 @@
-package pko;
+package kmip;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -10,12 +10,12 @@ import graf.Miasto;
 import graf.Polaczenie;
 
 /**
- * PKO - przygotowany kontener operacyjny
+ * Kmip - kontener map i połączeń
  */
-public class Pko {
+public class Kmip {
     private List<Miasto> miasta;
 
-    public Pko(File plik, int idBazy) {
+    public Kmip(File plik, int idBazy) {
         miasta = new ArrayList<Miasto>();
         wczytajPko(plik);
         Dijkstra.obliczDrogi(miasta.get(idBazy).getW());

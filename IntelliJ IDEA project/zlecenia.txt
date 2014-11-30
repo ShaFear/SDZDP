@@ -1,0 +1,5 @@
+﻿40
+001 3 0 Laptop 40
+002 3 2 Robot 100
+003 3 0 Paczka 0 
+004 3 1 Pudełka 10  
