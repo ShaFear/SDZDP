@@ -8,13 +8,13 @@ import java.util.Collections;
 
 public class TestPrzesylki {
     public static void main(String args[]) {
-        ArrayList <Miasto> m = new ArrayList<Miasto>();
+        ArrayList<Miasto> m = new ArrayList<Miasto>();
         int pj = 2; //pojemnosc samochodu
 
         File f = new File("test.txt");
         Kmip p = new Kmip(f, 0);
 
-        for(int j=0; j < 5; j++) {
+        for (int j = 0; j < 5; j++) {
             m.add(new Miasto(pj, p.getMiasta().get(j)));
         }
 
@@ -56,7 +56,7 @@ public class TestPrzesylki {
 
         Collections.sort(m);
 
-        for(int j=0; j < m.size(); j++) {
+        for (int j = 0; j < m.size(); j++) {
             System.out.println(m.get(j).toString());
         }
     }

@@ -26,9 +26,9 @@ public class Miasto implements Comparable<Miasto> {
     }
 
     public void obliczPriorytet() {
-        int j = przesylki.size()-1;
+        int j = przesylki.size() - 1;
         priorytet = 0;
-        while ((j >= przesylki.size()- pojemnoscSamochodu) && (j>=0)) {
+        while ((j >= przesylki.size() - pojemnoscSamochodu) && (j >= 0)) {
             priorytet += przesylki.get(j).getPriorytet();
             j--;
         }

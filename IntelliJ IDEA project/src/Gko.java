@@ -19,9 +19,12 @@ public class Gko {
         kp = new Kp(kmip, pojemnoscSamochodu, fplikZlecen);
     }
 
-    public static void main(String args[]) {
-        Gko gko = new Gko("miasta.txt", "zlecenia.txt", 3);
-        System.out.println(gko.toString());
+    public Kmip getKmip() {
+        return kmip;
+    }
+
+    public Kp getKp() {
+        return kp;
     }
 
     @Override
@@ -29,7 +32,7 @@ public class Gko {
         return kmip.toString() + "\n" + kp.toString();
     }
 
-    public int getIdBazy(File plik){
+    public int getIdBazy(File plik) {
         return 0;
     }
 }
