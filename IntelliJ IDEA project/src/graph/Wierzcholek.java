@@ -6,7 +6,7 @@ import java.util.List;
 public class Wierzcholek implements Comparable<Wierzcholek> {
     private Miasto miasto;
     public List<Polaczenie> polaczenia = new ArrayList<Polaczenie>();
-    public double najmniejszaOdleglosc = Double.POSITIVE_INFINITY;
+    public int najmniejszaOdleglosc = Integer.MAX_VALUE;
     public Wierzcholek poprzedni;
 
     public Wierzcholek(Miasto miasto) {
@@ -19,5 +19,9 @@ public class Wierzcholek implements Comparable<Wierzcholek> {
 
     public int compareTo(Wierzcholek inny) {
         return Double.compare(najmniejszaOdleglosc, inny.najmniejszaOdleglosc);
+    }
+
+    public Miasto getMiasto() {
+        return this.miasto;
     }
 }
