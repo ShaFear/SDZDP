@@ -8,4 +8,9 @@ public class Polaczenie {
         this.cel = cel;
         this.odleglosc = odleglosc;
     }
+
+    @Override
+    public String toString() {
+        return cel.getMiasto().toString() + ": " + odleglosc;
+    }
 }
