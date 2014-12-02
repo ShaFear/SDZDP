@@ -1,0 +1,55 @@
+﻿0
+001 0 1 male 10
+002 0 2 duze 50
+003 0 3 zloto 100
+004 0 4 puste 0 
+005 0 5 srebrne 75 
+006 0 6 piesek 12
+007 0 7 male 10
+008 0 8 duze 50
+009 0 9 zloto 100
+010 0 10 puste 0 
+011 0 11 srebrne 75 
+012 0 12 duze 50
+013 0 11 zloto 100
+014 0 1 puste 0 
+015 0 2 srebrne 75 
+016 0 3 duze 50
+017 0 4 zloto 100
+018 0 5 puste 0 
+019 0 6 srebrne 75 
+020 0 7 duze 50
+021 0 8 zloto 100
+022 0 9 puste 0 
+023 0 10 srebrne 75 
+024 0 12 duze 50
+025 0 11 zloto 100
+026 0 1 puste 0 
+027 0 2 srebrne 75 
+028 0 3 duze 50
+029 0 3 zloto 100
+030 0 3 puste 0 
+031 0 4 srebrne 75 
+032 0 5 duze 50
+033 0 6 zloto 100
+034 0 6 puste 0 
+035 0 7 srebrne 75 
+036 0 8 duze 50
+037 0 9 zloto 100
+038 0 10 puste 0 
+039 0 10 srebrne 75 
+040 0 10 duze 50
+041 0 11 zloto 100
+042 0 12 puste 0 
+043 0 1 srebrne 75 
+044 0 1 duze 50
+045 0 2 zloto 100
+046 0 6 puste 0 
+047 0 7 srebrne 75 
+048 0 7 duze 50
+049 0 6 zloto 100
+050 0 7 puste 0 
+
+
+
+

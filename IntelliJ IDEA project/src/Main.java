@@ -42,7 +42,12 @@ public class Main {
         }
 
         Gko gko = new Gko(plikMiast, plikZleceń, pojemnośćSamochodu);
-        System.out.println(gko.toString());
-
+        System.out.println("----------------------===Miasta===-------------------\n" + gko.getKmip().toString());
+        System.out.println("----------------------===Przesyłki przed===-------------------\n" + gko.getKp().toString());
+        System.out.print("-------------------===Rozwiązanie===---------------\n");
+        Rozwiazanie rozwiazanie = new Rozwiazanie(gko, liczbaSamochodów);
+        System.out.println("\n" + rozwiazanie.toString());
+        System.out.println("----------------------===Przesyłki po===-------------------\n" + gko.getKp().toString());
+        System.out.println(gko.getKmip().getMiasta().get(6).getW().najmniejszaOdleglosc);
     }
 }

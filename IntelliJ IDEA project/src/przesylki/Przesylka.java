@@ -1,6 +1,10 @@
 package przesylki;
 
 public class Przesylka implements Comparable<Przesylka> {
+    public int getId() {
+        return id;
+    }
+
     private int id;
     private String nazwa;
 

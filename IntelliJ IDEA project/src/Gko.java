@@ -10,11 +10,19 @@ import java.util.Scanner;
 public class Gko {
     private Kmip kmip;
     private Kp kp;
+    private int idBazy;
+
+    public int getPojemnosc() {
+        return pojemnosc;
+    }
+
+    private int pojemnosc;
 
     public Gko(String plikMapy, String plikZlecen, int pojemnoscSamochodu) {
+        idBazy = 0;
+        this.pojemnosc = pojemnoscSamochodu;
         File fplikZlecen = new File(plikZlecen);
         File fplikMapy = new File(plikMapy);
-        int idBazy = this.getIdBazy(fplikZlecen);
         kmip = new Kmip(fplikMapy, idBazy);
         kp = new Kp(kmip, pojemnoscSamochodu, fplikZlecen);
     }
@@ -32,7 +40,7 @@ public class Gko {
         return kmip.toString() + "\n" + kp.toString();
     }
 
-    public int getIdBazy(File plik) {
-        return 0;
+    public int getIdBazy() {
+        return idBazy;
     }
 }

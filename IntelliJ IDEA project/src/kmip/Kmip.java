@@ -48,6 +48,9 @@ public class Kmip {
                                 miasta.get(Integer.parseInt(lm[0])).getW().polaczenia.add(new Polaczenie(
                                         miasta.get(Integer.parseInt(lm[1])).getW(), Integer.parseInt(lm[2])
                                 ));
+                                miasta.get(Integer.parseInt(lm[1])).getW().polaczenia.add(new Polaczenie(
+                                        miasta.get(Integer.parseInt(lm[0])).getW(), Integer.parseInt(lm[2])
+                                ));
                             }
                         }
 

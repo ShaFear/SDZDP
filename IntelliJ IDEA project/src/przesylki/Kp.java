@@ -11,12 +11,12 @@ import java.util.Collections;
  * Kp - kontener przesyłek
  */
 public class Kp {
-    ArrayList<Miasto> m;
+    ArrayList<Miasto> miasta;
 
     public Kp(Kmip kmip, int pojemnoscSamochodu, File zlecenia) {
-        m = new ArrayList<Miasto>();
+        miasta = new ArrayList<Miasto>();
         for (int j = 0; j < kmip.getMiasta().size(); j++) {
-            m.add(new Miasto(pojemnoscSamochodu, kmip.getMiasta().get(j)));
+            miasta.add(new Miasto(pojemnoscSamochodu, kmip.getMiasta().get(j)));
         }
         try {
             InputStream fis = new FileInputStream(zlecenia);
@@ -27,21 +27,29 @@ public class Kp {
                     String ls[] = l.split(" ");
                     if (ls.length == 5) {
                         Przesylka p = new Przesylka(Integer.parseInt(ls[0]), ls[3], Integer.parseInt(ls[4]));
-                        m.get(Integer.parseInt(ls[2])).dodajPrzesylke(p);
+                        miasta.get(Integer.parseInt(ls[2])).dodajPrzesylke(p);
                     }
                 }
         } catch (Exception e) {
             System.err.println(e);
             return;
         }
-        Collections.sort(m);
+        this.sortKp();
+    }
+
+    public void sortKp(){
+        Collections.sort(miasta);
+    }
+
+    public ArrayList<Miasto> getMiasta() {
+        return miasta;
     }
 
     @Override
     public String toString() {
         String s = "";
-        for (int j = 0; j < m.size(); j++) {
-            s += m.get(j).toString() + "\n";
+        for (int j = 0; j < miasta.size(); j++) {
+            s += miasta.get(j).toString() + "\n";
         }
         return s;
     }
