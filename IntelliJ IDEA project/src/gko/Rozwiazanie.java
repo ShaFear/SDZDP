@@ -1,4 +1,4 @@
-import przesylki.Miasto;
+package gko;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,6 +46,10 @@ public class Rozwiazanie {
                     } else {
                         break;
                     }
+                }
+                if (g.getKp().getMiasta().get(lm).getMiasto().getW().najmniejszaOdleglosc != Integer.MAX_VALUE) {
+                    tTemp[i] = t[i];
+                    t[i] += g.getKp().getMiasta().get(lm).getMiasto().getW().najmniejszaOdleglosc;
                 }
                 g.getKp().sortKp();
                 //System.out.println("-----------------"+g.getKp().toString()+"-----------------");

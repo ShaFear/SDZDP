@@ -1,8 +1,9 @@
+package gko;
+
 import kmip.Kmip;
 import przesylki.Kp;
 
 import java.io.*;
-import java.util.Scanner;
 
 /**
  * gko - główny kontener operacyjny

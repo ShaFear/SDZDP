@@ -1,4 +1,4 @@
-
+import gko.Gko;
 
 /**
  * Created by shafe_000 on 2014-11-30.
@@ -45,9 +45,8 @@ public class Main {
         System.out.println("----------------------===Miasta===-------------------\n" + gko.getKmip().toString());
         System.out.println("----------------------===Przesyłki przed===-------------------\n" + gko.getKp().toString());
         System.out.print("-------------------===Rozwiązanie===---------------\n");
-        Rozwiazanie rozwiazanie = new Rozwiazanie(gko, liczbaSamochodów);
+        gko.Rozwiazanie rozwiazanie = new gko.Rozwiazanie(gko, liczbaSamochodów);
         System.out.println("\n" + rozwiazanie.toString());
         System.out.println("----------------------===Przesyłki po===-------------------\n" + gko.getKp().toString());
-        System.out.println(gko.getKmip().getMiasta().get(6).getW().najmniejszaOdleglosc);
     }
 }

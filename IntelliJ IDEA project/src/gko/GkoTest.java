@@ -1,3 +1,5 @@
+package gko;
+
 import przesylki.Miasto;
 
 /**
