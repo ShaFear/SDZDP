@@ -7,6 +7,11 @@ import java.util.ArrayList;
 public class Miasto {
     private int id;
     private String nazwa;
+
+    public ArrayList<EtapDrogi> getEtapy() {
+        return etapy;
+    }
+
     private ArrayList<EtapDrogi> etapy;
 
     public Wierzcholek getW() {

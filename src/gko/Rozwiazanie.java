@@ -1,7 +1,11 @@
 package gko;
 
+import dijkstra.Dijkstra;
+import dijkstra.EtapDrogi;
+
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by shafe_000 on 2014-12-02.
@@ -40,7 +44,13 @@ public class Rozwiazanie {
                     if (lp - j >= 0) {
                         if (g.getKp().getMiasta().get(lm).getPrzesylki().size() > 0) {
                         rozwiazanie.add(new ElementRozwiazania(tTemp[i] + " pobrano przesyłkę " + changeId(g.getKp().getMiasta().get(lm).getPrzesylki().get(lp - j).getId()) + " z miasta "+ baza +"\n"));
-                        rozwiazanie.add(new ElementRozwiazania(t[i] + " dostarczono przesyłkę " + changeId(g.getKp().getMiasta().get(lm).getPrzesylki().get(lp - j).getId()) + " do miasta "+ g.getKp().getMiasta().get(lm).getMiasto().toString()+"\n"));
+                            System.out.print(tTemp[i] + " Samochód: "+ j + ", pobrano " + changeId(g.getKp().getMiasta().get(lm).getPrzesylki().get(lp - j).getId()) + " z "+ baza +"\n");
+                            List<EtapDrogi> etapy = Dijkstra.getShortestPathTo(g.getKp().getMiasta().get(lm).getMiasto().getW());
+                            for(int jk=0; jk<etapy.size() -1; jk++){
+                                System.out.print(tTemp[i]+etapy.get(jk).getOdleglosc() + " Samochód: "+ j + ", minął " + etapy.get(jk).getMiasto() + "\n");
+                            }
+                            System.out.print(t[i] + " Samochód: "+ j + ", dostarczono " + changeId(g.getKp().getMiasta().get(lm).getPrzesylki().get(lp - j).getId()) + " do "+  g.getKp().getMiasta().get(lm).getMiasto().toString() +"\n");
+                        rozwiazanie.add(new ElementRozwiazania(t[i] + " dostarczono przesyłkę " + changeId(g.getKp().getMiasta().get(lm).getPrzesylki().get(lp - j).getId()) + " do miasta " + g.getKp().getMiasta().get(lm).getMiasto().toString() + "\n"));
                         g.getKp().getMiasta().get(lm).getPrzesylki().remove(lp - j);
                         g.getKp().getMiasta().get(lm).obliczPriorytet();}
                     } else {
