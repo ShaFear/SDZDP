@@ -5,6 +5,11 @@ import gko.Gko;
  */
 public class Main {
     public static void main(String args[]) {
+        wczytajDaneiPokazRozwiazanie(args);
+        VGraph g = new VGraph();
+    }
+
+    static void wczytajDaneiPokazRozwiazanie(String args[]){
         String plikMiast = "";
         String plikZleceń = "";
         Integer liczbaSamochodów = 10;
@@ -40,14 +45,13 @@ public class Main {
                 return;
             }
         }
-
         Gko gko = new Gko(plikMiast, plikZleceń, pojemnośćSamochodu);
+
         System.out.println("----------------------===Miasta===-------------------\n" + gko.getKmip().toString());
         System.out.println("----------------------===Przesyłki przed===-------------------\n" + gko.getKp().toString());
         System.out.print("-------------------===Rozwiązanie===---------------\n");
         gko.Rozwiazanie rozwiazanie = new gko.Rozwiazanie(gko, liczbaSamochodów);
         System.out.println("\n" + rozwiazanie.toString());
         System.out.println("----------------------===Przesyłki po===-------------------\n" + gko.getKp().toString());
-
     }
 }
