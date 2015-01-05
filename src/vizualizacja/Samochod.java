@@ -16,4 +16,6 @@ public class Samochod{
     void addZdarzenie(Zdarzenie z){
         zdarzenia.add(z);
     }
+
+
 }

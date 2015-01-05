@@ -18,5 +18,15 @@ public class RuchSamochodow {
     public List<Samochod> getSamochody() {
         return samochody;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder s = new StringBuilder();
+        for(int j=0; j<samochody.size(); j++){
+            s.append("Samochód o numerze: " + j + "\n");
+            s.append(samochody.get(j).getZdarzenia().toString() + "\n");
+        }
+        return s.toString();
+    }
 }
 

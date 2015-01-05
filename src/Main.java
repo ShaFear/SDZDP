@@ -1,12 +1,16 @@
 import gko.Gko;
+import vizualizacja.RuchSamochodow;
 
 /**
  * Created by shafe_000 on 2014-11-30.
  */
 public class Main {
+    private static RuchSamochodow ruchSamochodow;
+
     public static void main(String args[]) {
         Gko gko = wczytajDaneiPokazRozwiazanie(args);
         VGraph g = new VGraph(gko);
+        //System.out.print(ruchSamochodow.toString());
     }
 
     static Gko wczytajDaneiPokazRozwiazanie(String args[]){
@@ -51,6 +55,7 @@ public class Main {
         System.out.println("----------------------===Przesyłki przed===-------------------\n" + gko.getKp().toString());
         System.out.print("-------------------===Rozwiązanie===---------------\n");
         gko.Rozwiazanie rozwiazanie = new gko.Rozwiazanie(gko, liczbaSamochodów);
+        ruchSamochodow = rozwiazanie.getRuchSamochodow();
         System.out.println("\n" + rozwiazanie.toString());
         System.out.println("----------------------===Przesyłki po===-------------------\n" + gko.getKp().toString());
         return gko;

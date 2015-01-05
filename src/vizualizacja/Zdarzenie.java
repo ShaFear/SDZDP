@@ -17,4 +17,9 @@ public class Zdarzenie{
         this.miejsce = miejsce;
         this.czas = czas;
     }
+
+    @Override
+    public String toString() {
+        return "\tczas: " + czas + "\tmiejsce: " + miejsce + "\n";
+    }
 }

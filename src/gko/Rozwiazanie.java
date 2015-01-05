@@ -19,6 +19,12 @@ public class Rozwiazanie {
 
     private ArrayList<ElementRozwiazania> rozwiazanie;
 
+    public RuchSamochodow getRuchSamochodow() {
+        return ruchSamochodow;
+    }
+
+    private RuchSamochodow ruchSamochodow;
+
     public Rozwiazanie(Gko g, int liczbaSamochodow) {
         String baza = g.getKp().getMiasta().get(g.getIdBazy()).getMiasto().toString();
         g.getKp().getMiasta().remove(g.getIdBazy());
@@ -27,7 +33,7 @@ public class Rozwiazanie {
         int tTemp[] = new int[liczbaSamochodow];
         int lm = g.getKp().getMiasta().size() - 1;    //indeks konca tablicy miast
         int lp = g.getKp().getMiasta().get(lm).getPrzesylki().size() - 1; //indeks konca tablicy przesylek dla ostatniego miasta
-        RuchSamochodow ruchSamochodow = new RuchSamochodow(liczbaSamochodow);
+        ruchSamochodow = new RuchSamochodow(liczbaSamochodow);
 
         //-------------Ostatni w kolejce ma zawsze pierwsza kolejnosc do wyslania---------------------------------------------
         rozwiazanie = new ArrayList<ElementRozwiazania>();
