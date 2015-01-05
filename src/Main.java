@@ -1,4 +1,5 @@
 import gko.Gko;
+import vizualizacja.JRuchSamochodow;
 import vizualizacja.RuchSamochodow;
 
 /**
@@ -10,6 +11,8 @@ public class Main {
     public static void main(String args[]) {
         Gko gko = wczytajDaneiPokazRozwiazanie(args);
         VGraph g = new VGraph(gko);
+        JRuchSamochodow JRS = new JRuchSamochodow();
+        JRS.uruchom(ruchSamochodow);
         //System.out.print(ruchSamochodow.toString());
     }
 
