@@ -14,8 +14,29 @@ public class PozycjeSamochodow {
 
                     switch (ruchSamochodow.samochody.get(j).getZdarzenia().get(i).getMiejsce()){
                         case "Warszawa": {
-                            circles[j].x = 414 + j*5;
+                            circles[j].x = 419 + j*5;
                             circles[j].y = 400;
+                            break;
+                        }
+                        case "Łódź": {
+                            circles[j].x = 286 + j*5;
+                            circles[j].y = 469;
+                            break;
+                        }
+                        case "Płock": {
+                            circles[j].x = 309 + j*5;
+                            circles[j].y = 360;
+                            break;
+                        }
+                        case "Poznań": {
+                            circles[j].x = 41 + j*5;
+                            circles[j].y = 373;
+                            break;
+                        }
+                        case "Bydgoszcz": {
+                            circles[j].x = 136 + j*5;
+                            circles[j].y = 266;
+                            break;
                         }
                     }
                     break;
