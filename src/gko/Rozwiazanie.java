@@ -60,9 +60,18 @@ public class Rozwiazanie {
                             System.out.print(tTemp[i] + " Samochód: " + i + ", pobrano " + iDprzesylki + " z " + baza + "\n");
                             ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(baza, tTemp[i]));
                             List<EtapDrogi> etapy = Dijkstra.getShortestPathTo( g.getKp().getMiasta().get(lm).getMiasto().getW());
-                            for (int jk = 0; jk < etapy.size() - 1; jk++) {
-                                System.out.print(tTemp[i] + etapy.get(jk).getOdleglosc() + " Samochód: " + i + ", minął " + etapy.get(jk).getMiasto() + "\n");
-                                ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(etapy.get(jk).getMiasto(), tTemp[i] + etapy.get(jk).getOdleglosc()));
+                            int czas = tTemp[i];
+                            for (int jk = 0; jk < etapy.size(); jk++) {
+                                int czas1 = etapy.get(jk).getOdleglosc();
+                                czas = czas + czas1;
+                                System.out.println(czas + " " + etapy.get(jk).getMiasto().toString());
+                                ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(etapy.get(jk).getMiasto().toString(), czas));
+                            }
+                            for (int jk = etapy.size()-1; jk >= 1; jk--) {
+                                int czas1 = etapy.get(jk).getOdleglosc();
+                                czas = czas + czas1 ;
+                                System.out.println(czas + " " + etapy.get(jk-1).getMiasto().toString());
+                                ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(etapy.get(jk-1).getMiasto().toString(), czas));
                             }
                             System.out.print(t[i] + " Samochód: " + i + ", dostarczono " + iDprzesylki + " do " + miastoCel + "\n");
                             ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(miastoCel, t[i]));
