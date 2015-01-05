@@ -73,6 +73,10 @@ public class Rozwiazanie {
                                 System.out.println(czas + " " + etapy.get(jk-1).getMiasto().toString());
                                 ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(etapy.get(jk-1).getMiasto().toString(), czas));
                             }
+                            czas += etapy.get(0).getOdleglosc();
+                            ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(baza, czas));
+                            System.out.println(czas + " " + baza);
+
                             System.out.print(t[i] + " Samochód: " + i + ", dostarczono " + iDprzesylki + " do " + miastoCel + "\n");
                             ruchSamochodow.getSamochody().get(i).getZdarzenia().add(new Zdarzenie(miastoCel, t[i]));
                             //------------------------------------------------------------------------------------------------------------------------------

@@ -38,6 +38,46 @@ public class PozycjeSamochodow {
                             circles[j].y = 266;
                             break;
                         }
+                        case "Tczew": {
+                            circles[j].x = 226 + j*5;
+                            circles[j].y = 120;
+                            break;
+                        }
+                        case "Gdańsk": {
+                            circles[j].x = 203 + j*5;
+                            circles[j].y = 79;
+                            break;
+                        }
+                        case "Elbląg": {
+                            circles[j].x = 283 + j*5;
+                            circles[j].y = 111;
+                            break;
+                        }
+                        case "Olsztyn": {
+                            circles[j].x = 374 + j*5;
+                            circles[j].y = 168;
+                            break;
+                        }
+                        case "Łomża": {
+                            circles[j].x = 514 + j*5;
+                            circles[j].y = 260;
+                            break;
+                        }
+                        case "Białystok": {
+                            circles[j].x = 605 + j*5;
+                            circles[j].y = 267;
+                            break;
+                        }
+                        case "Ełk": {
+                            circles[j].x = 549 + j*5;
+                            circles[j].y = 160;
+                            break;
+                        }
+                        case "Suwałki": {
+                            circles[j].x = 600 + j*5;
+                            circles[j].y = 118;
+                            break;
+                        }
                     }
                     break;
                 }
