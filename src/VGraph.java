@@ -27,8 +27,6 @@ public class VGraph extends JFrame {
 
         getContentPane().add(vv);
 
-        System.out.print(g.findEdge("Warszawa", "Łódź").toString());
-
         pack();
         setSize(new Dimension(700, 700));
         setVisible(true);
